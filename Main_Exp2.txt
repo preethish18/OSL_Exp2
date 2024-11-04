@@ -41,6 +41,12 @@ https://127.0.0.1:8834/
 >>Enter Target IP Address
 --------------------------------------------------------------
 Metasploit
+
+Note
+Open Both Kali and MetaSpoliable2 OS
+here the RHOST IP refers to MetaSpoliable2 OS IP address
+
+
 >>sudo msfconsole
 >>msf> search 
 >>msf6 > search vsftpd
